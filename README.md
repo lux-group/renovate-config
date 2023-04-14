@@ -6,7 +6,6 @@ If most/all repo's extend this, then things like the npmtoken (necessary for upd
 updated here and have that propagate to most repos.
 
 # Config
-```
 {
   <a href="https://docs.renovatebot.com/configuration-options/#dependencydashboard" target="_blank">"dependencyDashboard": true,</a>
   "encrypted": {
@@ -38,4 +37,3 @@ updated here and have that propagate to most repos.
   "rangeStrategy": "replace",
   "separateMultipleMajor": true
 }
-```
