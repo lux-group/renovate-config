@@ -14,9 +14,7 @@
     {
       "groupName": "minor-packages",
       "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
-      "excludeDepNames": [
-        "node"
-      ]
+      "excludeDepNames": ["node"]
     },
     {
       "groupName": "Node",
