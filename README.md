@@ -3,6 +3,8 @@
 All repos with renovate should extend npmtoken.json. Thus we will have a single source of truth to update
 across all repos.
 
+Token taken from production customer portal on heroku.
+
 # renovate-config
 
 This is the repo for our `default` implementation of renovate.json. Repos without special needs should extend this.
