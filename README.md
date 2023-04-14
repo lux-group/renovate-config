@@ -1,9 +1,11 @@
+# npmtoken
+
+All repos with renovate should extend npmtoken.json. Thus we will have a single source of truth to update
+across all repos.
+
 # renovate-config
 
-This is the repo for our `default` implementation of renovate.json.
-
-If most/all repo's extend this, then things like the npmtoken (necessary for updating some @luxuryescapes npm dependencies) can be
-updated here and have that propagate to most repos.
+This is the repo for our `default` implementation of renovate.json. Repos without special needs should extend this.
 
 # default.json Config
 
