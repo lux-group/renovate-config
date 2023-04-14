@@ -5,20 +5,21 @@ This is the repo for our `default` implementation of renovate.json.
 If most/all repo's extend this, then things like the npmtoken (necessary for updating some @luxuryescapes npm dependencies) can be
 updated here and have that propagate to most repos.
 
-# Config
+# default.json Config
 
 Consult the [Docs](https://docs.renovatebot.com/configuration-options/).
 
 ```json
 {
   "dependencyDashboard": true,
-  //the token/s inside must have been encrypted by renovates public key,
-  //so only renovate can use them
-  //original key is the production npm token found on customer portal on heroku
-  //https://docs.renovatebot.com/getting-started/private-packages/#add-an-encrypted-npm-token-to-renovate-config
-  "encrypted": {
-    "npmToken": "encrypted token"
-  },
+  //extends the npmtoken config, the single source of truth for the npm token
+  //"encrypted": {
+  //  "npmToken": "encrypted_token"
+  //}
+  //encrypted_token is the customer portal production token from heroku
+  //it is encrypted by renovate's public key
+  //https://docs.renovatebot.com/getting-started/private-packages/#add-npmrc-string-to-renovate-config
+  "extends": ["local>renovate-config:npmtoken"]
   "npmrc": "//registry.npmjs.org/:_authToken=${NPM_TOKEN}",
   "packageRules": [
     {
