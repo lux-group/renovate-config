@@ -26,6 +26,8 @@
     }
   ],
   "prConcurrentLimit": 5,
+  "prCreation": "not-pending",
+  "prNotPendingHours": 24,
   "rangeStrategy": "replace",
   "separateMultipleMajor": true
 }

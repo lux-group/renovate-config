@@ -9,8 +9,9 @@ updated here and have that propagate to most repos.
 ```json
 {
   "dependencyDashboard": true,
-  "encrypted": {
-    "npmToken": "wcFMA/xDdHCJBTolAQ//am1cZS5HMYp68HS4s7RXqQAMszPMpbDBcyZwxJ/lKl7BR8DhpxegbeaHVQLwdRlAEABCzbxoi/w3mpVlByr2Crok5SDYuoEOXigwlvFKXX3dnTpteULezLAxOzncuNW4CQlOrnTC5HiSvTjkfM9oqYnYdRRRVPYBBnOQKoQy60jHeDiFr4sV+jDup4MwuRjb04AJbGZcgGTo2U9FP8WcZSbh0BuI4gmMPwmOIIAK8RIEUEigpP7Tm9EqQzOv9rRl7nws1/HYhcmNX7EQey13tzc5q3vn6Odx4nWsOmdCV4qph1edURrbhYn0L+DGd7J+xu8yj7hUwdb22pBr76y2RXlF8Sywkmh035X6/Eof/nnKEnqzT0HPGVEqP9UeyvAoVedQ94j3FklQ1+CNjn74gTHT7cvmNXyxXGO4L5sqay2Ftt8USYpuJYr+AQhH6MnpVUXHHv2Zwoi29FVF68uNpIh/E7vY3Pi99dgwYa0GZM+8fR8mvZQ3DaxIWUAITcbGMzR0zvkNkjfcZWzuuTONy2yMwohMk9mpjRKmPZaegya8ErqHqyFb+S+Sbi/n0ImwedUco4W4P+pWF5g7110zmFEPu3u908pRs1Wz4oTpo0FzqLKa9m75BPSWuuxHw45UPGU8TG+CzNKbSfuiMJ+QS2t/omye4hB7SJ99bh82s+7SeAGVBGXK163bKgY8xzDP3z5bA1NyFZegAv568oT0QrCY93izezkffpA33kpuBK4bRYKCQuDMYq/pSZlxmmb+7BpkeyXh0jAtPlA3unX59ZV8EYu20JQEh6zXP58zK6aYwFcRtoJYwlZV+q4x52svdp7Nt3HHnM/1PA"
+  "encrypted": { //the token/s inside must have been encrypted by renovates public key, so only renovate can use them
+                 //https://docs.renovatebot.com/getting-started/private-packages/#add-an-encrypted-npm-token-to-renovate-config
+    "npmToken": "encrypted token"
   },
   "npmrc": "//registry.npmjs.org/:_authToken=${NPM_TOKEN}",
   "packageRules": [
@@ -35,7 +36,9 @@ updated here and have that propagate to most repos.
     }
   ],
   "prConcurrentLimit": 5,
-  "rangeStrategy": "replace",
-  "separateMultipleMajor": true
+  "prCreation": "not-pending", //wait until CI has finished to raise PR (fail or pass)
+  "prNotPendingHours": 24, //if CI has not finished after 24 hours, raise PR anyway
+  "rangeStrategy": "replace", //Replace the range with a newer one if the new version falls outside it, and update nothing otherwise
+  "separateMultipleMajor": true //PRs will be raised separately for each available major upgrade version.
 }
 ```
