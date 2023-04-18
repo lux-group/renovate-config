@@ -1,5 +1,5 @@
 {
-  "extends": ["local>renovate-config:npmtoken"]
+  "extends": ["github>lux-group/renovate-config:npmtoken"],
   "masterIssue": true,
   "npmrc": "//registry.npmjs.org/:_authToken=${NPM_TOKEN}",
   "packageRules": [
