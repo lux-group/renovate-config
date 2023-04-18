@@ -14,11 +14,12 @@
     {
       "groupName": "minor-packages",
       "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
-      "excludeDepNames": ["node"]
+      "excludeDepNames": ["node", "@luxuryescapes/", "cimg/node", "@types/node"]
     },
     {
       "groupName": "Node",
       "matchPackageNames": ["cimg/node", "node"]
+      "allowedVersions": "[1–2](0|2|4|6|8)\.\d+\.\d+"
     }
   ],
   "prConcurrentLimit": 5,
