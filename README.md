@@ -43,7 +43,7 @@ Consult the [Docs](https://docs.renovatebot.com/configuration-options/).
       "groupName": "Node",
       "matchPackageNames": ["cimg/node", "node", "@types/node"]
       //only allow updates to even numbered versions eg 16.xx.xx
-      "allowedVersions": "/^[1–2](0|2|4|6|8)\.\d+\.\d+$/"
+      "allowedVersions": "/^[1–2]0|2|4|6|8)\\.\\d+\\.\\d+$/"
     }
   ],
   "prConcurrentLimit": 5,
