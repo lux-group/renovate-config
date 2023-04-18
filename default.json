@@ -24,6 +24,6 @@
   "prConcurrentLimit": 5,
   "prCreation": "not-pending",
   "prNotPendingHours": 24,
-  "rangeStrategy": "replace",
+  "rangeStrategy": "pin",
   "separateMultipleMajor": true
 }
