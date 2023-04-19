@@ -5,7 +5,8 @@
   "packageRules": [
     {
       "groupName": "dev-dependencies",
-      "matchDepTypes": ["devDependencies"]
+      "matchDepTypes": ["devDependencies"],
+      "excludeDepNames": ["@luxuryescapes/"]
     },
     {
       "groupName": "luxuryescapes-packages",
