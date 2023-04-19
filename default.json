@@ -15,7 +15,7 @@
     {
       "groupName": "minor-packages",
       "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
-      "excludeDepNames": ["node", "cimg/node", "@types/node"]
+      "excludeDepNames": ["node", "cimg/node", "@types/node"],
       "excludePackagePrefixes": ["@luxuryescapes/"]
     },
     {
