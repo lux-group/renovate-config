@@ -6,7 +6,7 @@
     {
       "groupName": "dev-dependencies",
       "matchDepTypes": ["devDependencies"],
-      "excludeDepPatterns": ["@luxuryescapes/"]
+      "excludePackagePrefixes": ["@luxuryescapes/"]
     },
     {
       "groupName": "luxuryescapes-packages",
@@ -15,7 +15,8 @@
     {
       "groupName": "minor-packages",
       "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
-      "excludeDepNames": ["node", "@luxuryescapes/", "cimg/node", "@types/node"]
+      "excludeDepNames": ["node", "cimg/node", "@types/node"]
+      "excludePackagePrefixes": ["@luxuryescapes/"]
     },
     {
       "groupName": "Node",
