@@ -16,11 +16,11 @@
       "groupName": "minor-packages",
       "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
       "excludeDepNames": ["node", "cimg/node", "@types/node"],
-      "excludePackagePrefixes": ["@luxuryescapes/"]
+      "excludePackagePrefixes": ["@luxuryescapes/", "circleci/"]
     },
     {
       "groupName": "Node",
-      "matchPackageNames": ["cimg/node", "node", "@types/node"],
+      "matchPackageNames": ["cimg/node", "node", "@types/node", "circleci/node"],
       "allowedVersions": "/^[1–2](0|2|4|6|8)\\.\\d+\\.\\d+$/"
     }
   ],
