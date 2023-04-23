@@ -15,7 +15,7 @@
     },
     {
       "groupName": "minor-packages",
-      "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
+      "matchUpdateTypes": ["digest", "minor", "patch"],
       "excludePackageNames": ["node", "cimg/node", "@types/node", "chromedriver"],
       "excludePackagePrefixes": ["@luxuryescapes/", "circleci/"]
     },
@@ -28,6 +28,6 @@
   "prConcurrentLimit": 5,
   "prCreation": "not-pending",
   "prNotPendingHours": 24,
-  "rangeStrategy": "pin",
+  "rangeStrategy": "bump",
   "separateMultipleMajor": true
 }

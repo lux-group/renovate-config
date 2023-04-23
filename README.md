@@ -39,7 +39,8 @@ Consult the [Docs](https://docs.renovatebot.com/configuration-options/).
     },
     {
       "groupName": "minor-packages",
-      "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
+      //will not update pinned versions - if you need a certain version then pin it
+      "matchUpdateTypes": ["digest", "minor", "patch"],
       "excludePackageNames": ["node", "cimg/node", "@types/node", "chromedriver"],
       "excludePackagePrefixes": ["@luxuryescapes/", "circleci/"]
     },
@@ -55,8 +56,8 @@ Consult the [Docs](https://docs.renovatebot.com/configuration-options/).
   "prCreation": "not-pending",
   //if CI has not finished after 24 hours, raise PR anyway
   "prNotPendingHours": 24,
-  //Replace the range with a newer one if the new version falls outside it, and update nothing otherwise
-  "rangeStrategy": "replace",
+  //bump the range even if the new version satisfies the existing range, e.g. ^1.0.0 -> ^1.1.0
+  "rangeStrategy": "bump",
   //PRs will be raised separately for each available major upgrade version.
   "separateMultipleMajor": true
 }
