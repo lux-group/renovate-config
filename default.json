@@ -6,7 +6,8 @@
     {
       "groupName": "dev-dependencies",
       "matchDepTypes": ["devDependencies"],
-      "excludePackagePrefixes": ["@luxuryescapes/"]
+      "excludePackagePrefixes": ["@luxuryescapes/"],
+      "excludePackageNames": ["chromedriver"]
     },
     {
       "groupName": "luxuryescapes-packages",
@@ -15,7 +16,7 @@
     {
       "groupName": "minor-packages",
       "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
-      "excludeDepNames": ["node", "cimg/node", "@types/node"],
+      "excludePackageNames": ["node", "cimg/node", "@types/node", "chromedriver"],
       "excludePackagePrefixes": ["@luxuryescapes/", "circleci/"]
     },
     {
