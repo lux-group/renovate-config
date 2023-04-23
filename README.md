@@ -28,7 +28,10 @@ Consult the [Docs](https://docs.renovatebot.com/configuration-options/).
   "packageRules": [
     {
       "groupName": "dev-dependencies",
-      "matchDepTypes": ["devDependencies"]
+      "matchDepTypes": ["devDependencies"],
+      "excludePackagePrefixes": ["@luxuryescapes/"],
+      //later versions of chromedriver break e2e's. Manual updates only
+      "excludePackageNames": ["chromedriver"]
     },
     {
       "groupName": "luxuryescapes-packages",
@@ -37,7 +40,8 @@ Consult the [Docs](https://docs.renovatebot.com/configuration-options/).
     {
       "groupName": "minor-packages",
       "matchUpdateTypes": ["digest", "minor", "patch", "pin"],
-      "excludeDepNames": ["node", "@luxuryescapes/", "cimg/node", "@types/node"]
+      "excludePackageNames": ["node", "cimg/node", "@types/node", "chromedriver"],
+      "excludePackagePrefixes": ["@luxuryescapes/", "circleci/"]
     },
     {
       "groupName": "Node",
