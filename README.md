@@ -38,10 +38,15 @@ Consult the [Docs](https://docs.renovatebot.com/configuration-options/).
       "matchPackagePrefixes": ["@luxuryescapes/"]
     },
     {
+      //added because yarn causes a lot of failures - updating it by itself makes updating packages easier
+      "groupName": "Yarn",
+      "matchPackageNames": ["yarn"]
+    },
+    {
       "groupName": "minor-packages",
       //will not update pinned versions - if you need a certain version then pin it
       "matchUpdateTypes": ["digest", "minor", "patch"],
-      "excludePackageNames": ["node", "cimg/node", "@types/node", "chromedriver"],
+      "excludePackageNames": ["node", "cimg/node", "@types/node", "chromedriver", "yarn"],
       "excludePackagePrefixes": ["@luxuryescapes/", "circleci/"]
     },
     {
