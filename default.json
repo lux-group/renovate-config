@@ -14,9 +14,13 @@
       "matchPackagePrefixes": ["@luxuryescapes/"]
     },
     {
+      "groupName": "Yarn",
+      "matchPackageNames": ["yarn"]
+    },
+    {
       "groupName": "minor-packages",
       "matchUpdateTypes": ["digest", "minor", "patch"],
-      "excludePackageNames": ["node", "cimg/node", "@types/node", "chromedriver"],
+      "excludePackageNames": ["node", "cimg/node", "@types/node", "chromedriver", "yarn"],
       "excludePackagePrefixes": ["@luxuryescapes/", "circleci/"]
     },
     {
