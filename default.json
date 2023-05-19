@@ -26,7 +26,8 @@
     {
       "groupName": "Node",
       "matchPackageNames": ["cimg/node", "node", "@types/node", "circleci/node"],
-      "allowedVersions": "/^[1–2](0|2|4|6|8)\\.\\d+\\.\\d+$/"
+      "allowedVersions": "/^[1–2](0|2|4|6|8)\\.\\d+\\.\\d+$/",
+      "minimumReleaseAge": "14 days"
     }
   ],
   "prConcurrentLimit": 5,
